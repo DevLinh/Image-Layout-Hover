@@ -121,3 +121,46 @@ body {
     background: #fff;
 }
 
+@media( max-width : 1000px ) {
+    .container {
+        width: 100%;
+        padding: 20px;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .container .box {
+        height: 250px;
+    }
+
+    .container .box .thumb {
+        display: none;
+    }
+}
+
+@media( max-width : 768px ) {
+    .container {
+        display: initial; 
+    }
+
+    .container .box {
+        width: 50%;
+        float: left;
+        height: 250px;
+    }
+}
+
+@media( max-width : 480px ) {
+    .container {
+        top: 0;
+        left: 0;
+        transform: translate(0);
+    }
+
+    .container .box {
+        width: 100%;
+        float: none;
+        height: 250px;
+    }
+}
+

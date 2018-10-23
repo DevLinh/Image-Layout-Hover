@@ -1,0 +1,123 @@
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1000px;
+    height: 500px;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.container .box {
+    position: relative;
+    width: 250px;
+    height: 500px;
+    background: #999;
+    transition: 0.5s;
+}
+
+.container .box:hover {
+    transform: scale(1.1);
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+}
+
+.container .box .thumb {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.container .box:nth-child(odd) .thumb {
+    bottom: 0;
+    left: 0;
+
+}
+
+.container .box .thumb img {
+    width: 100%;
+}
+
+.container .box .details {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #262626;
+}
+
+.container .box:nth-child(even) .details {
+    bottom: 0;
+    left: 0;
+}
+
+.container .box:nth-child(1) .details {
+    background: #8553cb;
+}
+
+.container .box:nth-child(2) .details {
+    background: #f28f01;
+}
+
+.container .box:nth-child(3) .details {
+    background: #79d400;
+}
+
+.container .box:nth-child(4) .details {
+    background: #ff3b34;
+}
+
+.container .box .details .content {
+    position: absolute;
+    top: calc(50% - 10px);
+    width: 100%;
+    transform: translateY(-50%);
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.container .box:hover .details .content {
+    top: calc(50%);
+}
+
+.container .box .details .content .fas {
+    font-size: 75px;
+    color: #fff;
+}
+
+.container .box .details .content h3 {
+    margin: 0;
+    padding: 0;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.container .box .details .content a {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.5s;
+    color: #fff;
+    transform: scale(0);
+}
+
+.container .box:hover .details .content a {
+    transform: scale(1);
+}
+
+.container .box .details .content a:hover {
+    color: #333;
+    background: #fff;
+}
+
